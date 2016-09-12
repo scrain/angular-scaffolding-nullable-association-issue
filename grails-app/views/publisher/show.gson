@@ -1,0 +1,7 @@
+import test.Publisher
+
+model {
+	Publisher publisher
+}
+
+json tmpl.publisher(publisher)

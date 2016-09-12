@@ -1,0 +1,8 @@
+import test.Publisher
+
+model {
+	Iterable<Publisher> publisherList
+}
+
+json tmpl.publisher(publisherList ?: [])
+

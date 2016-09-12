@@ -1,0 +1,12 @@
+<fieldset class="form">
+  <div class="fieldcontain">
+    <label for="publisher">Publisher</label>
+    <select name="publisher" id="publisher" ng-model="vm.book.publisher" ng-options="publisher for publisher in vm.publisherList track by publisher.id"></select>
+  </div>
+  <div class="fieldcontain required">
+    <label for="title">Title
+      <span class="required-indicator">*</span>
+    </label>
+    <input required="" name="title" id="title" ng-model="vm.book.title" type="text" />
+  </div>
+</fieldset>

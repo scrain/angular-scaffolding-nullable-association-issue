@@ -1,0 +1,30 @@
+<div class="nav" role="navigation">
+    <ul>
+        <li><a ui-sref="index" class="home">Home</a></li>
+        <li><a ui-sref="publisher.create" class="create">New Publisher</a></li>
+    </ul>
+</div>
+<div id="list-publisher" class="content scaffold-list" role="main">
+    <h1>Publisher List</h1>
+    <table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-class="{'even': $index%2 == 0, 'odd': $index%2 == 1}" ng-repeat="publisher in vm.publisherList">
+      <td>
+        <a ui-sref="publisher.show({id: publisher.id})">{{publisher.id}}</a>
+      </td>
+      <td>
+        <span>{{publisher.name}}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    <!--    <div class="pagination">
+            <g:paginate total="${partCount ?: 0}" />
+        </div>-->
+</div>
